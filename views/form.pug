@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  form(method="POST" action="/new")
+    label 
+      p Имя автора
+      input(name="messageUser" type="text" required=true)
+    label
+      p Текст сообщения
+      input(name="messageText" type="text" required=true)
+    p
+      input(type="submit" value="Написать")
+  a(href="/") Вернуться на главную
